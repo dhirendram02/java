@@ -1,9 +1,9 @@
 class secondLargest{  
-    public static int getSecondLargest(int[] a, int total){  
+    public static int getSecondLargest(int[] a, int n){  
     int temp;  
-    for (int i = 0; i < total; i++)   
+    for (int i = 0; i < n; i++)   
             {  
-                for (int j = i + 1; j < total; j++)   
+                for (int j = i + 1; j < n; j++)   
                 {  
                     if (a[i] > a[j])   
                     {  
@@ -13,7 +13,7 @@ class secondLargest{
                     }  
                 }  
             }  
-           return a[total-2];  
+           return a[n-2];  
     }  
     public static void main(String args[]){  
     int a[]={1,2,5,6,3,2};   
