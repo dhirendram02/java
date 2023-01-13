@@ -1,12 +1,24 @@
-import java.io.*; 
-import java.util.Scanner; 
-class problem2 { 
-    public static void main(String[] args) 
-    { 
-        float f1 = 4.32f;
-        float f2 = 2.33f;
-        float p = f1 * f2;
-        System.out.println(p); 
-    } 
-} 
+class problem2 {
+	static int search(int arr[], int n, int x)
+	{
+		for (int i = 0; i < n; i++) {
+			if (arr[i] == x)
+				return i;
+		}
+		return -1;
+	}
 
+	public static void main(String[] args)
+	{
+		int[] arr = { 3, 4, 1, 7, 5 };
+		int n = arr.length;
+		
+		int x = 4;
+
+		int index = search(arr, n, x);
+		if (index == -1)
+			System.out.println("element is not present");
+		else
+			System.out.println("element found at position " + index);
+	}
+}
